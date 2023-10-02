@@ -14,6 +14,8 @@ Welcome to our GitHub repository! We appreciate your interest in contributing to
 
 To add your project to this repository, please follow these steps:
 
+✔️ Star⭐ this Repository .
+
 ✔️ Fork this repository to your GitHub account.
 
 ✔️ Clone your forked repository to your local machine.
