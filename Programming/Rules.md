@@ -1,4 +1,4 @@
-## Rules for Adding a Project
+## Rules for Adding a Questions
 
 1. **Ownership**: You can only add projects and code that belong to you. We encourage you to showcase your own work and contribute projects that you have personally developed.
 
