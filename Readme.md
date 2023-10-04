@@ -26,7 +26,15 @@ To add your project to this repository, please follow these steps:
 
 ✔️ Create a new branch to work on your project addition.
 
+   ```bash
+   git checkout -b <Your-Name>
+   ```
+
 ✔️ Add your project to the repository.Make sure to include all the necessary files and documentation.
+
+   ```bash
+   git add .
+   ```
 
 ✔️ Commit your changes with a meaningful commit message.
 
