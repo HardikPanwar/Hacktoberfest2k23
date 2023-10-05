@@ -1,0 +1,161 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Text editor</title>
+	<style>
+    body{
+    overflow-x:hidden;
+    overflow-y:hidden;
+    }
+    textarea:focus, input:focus{
+      outline: none;
+    }
+  	.text_edit {
+      padding: 2%;
+  		width: 100%;
+  		height: 80%;
+  		resize: none;
+      border-width: 0;
+      font-family: Georgia, Times, "Times New Roman", serif;
+    	font-size: 24px;
+    	font-style: normal;
+    	font-variant: normal;
+    	font-weight: 500;
+    	line-height: 26.4px;
+    }
+    .text_edit:focus {
+      outline: none;
+    }
+		#view_count {
+      float:left;
+      padding: 5px;
+      margin: 5px;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      font-size: 24px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 500;
+      line-height: 26.4px;
+		}
+    #marks {
+      float:left;
+      padding: 5px;
+      margin: 5px;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      font-size: 24px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 500;
+      line-height: 26.4px;
+		}
+    #theme {
+      float:right;
+      padding: 5px;
+      margin: 5px;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      font-size: 24px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 500;
+      line-height: 26.4px;
+    }
+    .fontcolor {
+      border-width: 0;
+      outline: none;
+    }
+    .bgcolor {
+      border-width: 0;
+      outline: none;
+    }
+    .fontcolor:focus {
+      outline: none;
+    }
+    .bgcolor:focus {
+      outline: none;
+    }
+	</style>
+	<script type="text/javascript">
+    function view_count () {
+        var textArea = document.getElementById('my_text');
+        var div = document.getElementById('view_count');
+        var text = textArea.value;
+		text = text.replace(/(^\s*)|(\s*$)/gi,"");
+		text = text.replace(/\n{1,}/gi," ");
+		text = text.replace(/\s{2,}/gi," ");
+
+		var words = text.split(" ");
+		var len = 0;
+		for (i = 0 ; i < words.length; i++)
+		{
+			if (words[i] != " " && words[i] != ""){
+			len += 1 ;
+
+			 }
+		}
+    if (text != undefined)
+		document.getElementById("view_count").innerHTML = "Words: " + len ;
+    if ( len >= 50000 ) {
+      document.getElementById ("marks").innerHTML = "You did it! You hit the 50000 words mark! Congratulations!";
+    }
+    else if ( len >= 40000 ) {
+      document.getElementById ("marks").innerHTML =  "You hit the 40000 words mark. Awesome!";
+    }
+    else if ( len >= 25000 ) {
+      document.getElementById ("marks").innerHTML =  "You hit the 25000 words mark. Nice work!";
+    }
+    else if ( len >= 10000 ) {
+      document.getElementById ("marks").innerHTML =  "You hit the 10000 words mark. Keep it up!";
+    }
+    else if ( len >= 5000 ) {
+      document.getElementById ("marks").innerHTML =  "You hit the 5000 words mark. Congrats!";
+    }
+    else if ( len >= 1667 ) {
+      document.getElementById ("marks").innerHTML =  "You hit the 1667 words mark. Great job for today!";
+    }
+    else
+      document.getElementById ("marks").innerHTML =  "";
+
+  
+    setTimeout(view_count, 1000);
+
+  }
+  
+
+// change theme function
+function changecolor() {
+  font = document.getElementById("fontval").value;
+  bg = document.getElementById("bgval").value;
+  fontfamily = document.getElementById("fontfamily").value;
+  fontsize = document.getElementById("fontsize").value;
+  document.body.style.color = font ;
+  document.getElementById("my_text").style.color = font ;
+  document.body.style.background = bg ;
+  document.getElementById("my_text").style.background = bg ;
+  document.getElementById("my_text").style.font = ("normal " + fontsize + " " + fontfamily) ;
+	
+}
+</script>
+
+
+</head>
+<body onload="view_count()">
+  <h1 style="text-align: center;">Text Editor</h1>
+  <hr/>
+  <!-- Text area -->
+  <textarea class="text_edit" id="my_text" placeholder="Start typing..."></textarea>
+  <br />
+  <hr/>
+  <div id="view_count">
+  </div>
+  <div id="marks">
+  </div>
+  <!-- Div to change themes -->
+  <div id="theme">
+    <input type = text name="fontcolor" id="fontval" placeholder = "Font color, eg: #7D3C98">
+    <input type = text name="bgcolor" id="bgval" placeholder = "Bg color, eg: black">
+    <input type = text name="fontfamily" id="fontfamily" placeholder = "Font name, eg: Arial">
+	  <input type = text name="fontsize" id="fontsize" placeholder = "Font size, default is 24px">
+    <button id = "themechange" onclick="changecolor()">Get New Theme </button>
+  </div>
+</body>
+</html>

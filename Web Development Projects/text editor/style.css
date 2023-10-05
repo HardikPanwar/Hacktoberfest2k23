@@ -1,0 +1,70 @@
+body{
+  overflow-x:hidden;
+  overflow-y:hidden;
+  }
+  textarea:focus, input:focus{
+    outline: none;
+  }
+  .text_edit {
+    padding: 2%;
+    width: 100%;
+    height: 90%;
+    resize: none;
+    border-width: 0;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+  }
+  .text_edit:focus {
+    outline: none;
+  }
+  #view_count {
+    float:left;
+    padding: 5px;
+    margin: 5px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+  }
+  #marks {
+    float:left;
+    padding: 5px;
+    margin: 5px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+  }
+  #theme {
+    float:right;
+    padding: 5px;
+    margin: 5px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+  }
+  .fontcolor {
+    border-width: 0;
+    outline: none;
+  }
+  .bgcolor {
+    border-width: 0;
+    outline: none;
+  }
+  .fontcolor:focus {
+    outline: none;
+  }
+  .bgcolor:focus {
+    outline: none;
+  }
