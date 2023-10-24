@@ -1,7 +1,6 @@
 # HacktoberFest_2023 ⭐✅
 
 # Project Contribution Guidelines
-
 Welcome to our GitHub repository! We appreciate your interest in contributing to our project. To maintain the quality and integrity of our codebase, please adhere to the following rules when adding a project:
 
 ## Rules for Adding a Project
